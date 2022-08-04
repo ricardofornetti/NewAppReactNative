@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import { useFonts } from "expo-font";
+import AppLoading from "expo-app-loading";
+import ShopNavigation from "./navegacion/ShopNavigation";
 
 export default function App() {
+  const [loaded] = useFonts({
+    PTSansNarrowBold: require("./assets/fonts/PTSansNarrow-Bold.ttf"),
+    PTSansNarrowRegular: require("./assets/fonts/PTSansNarrow-Regular.ttf"),
+  });
+
+  if (!loaded) return <AppLoading />
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <ShopNavigation>
+      <View style={styles.screen}></View>
       <StatusBar style="auto" />
-    </View>
+    </ShopNavigation>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  screen: {
+    marginTop: "10%",
+    padding: 30,
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  }
 });

@@ -16,7 +16,7 @@ export const EstructurasScreen = ({ navigation, route }) => {
   };
 
   const renderItemEstructura = ({ item }) => {
-    <EstructuraItem item={item} onSelected={SeleccionEstructura} />;
+    return<EstructuraItem item={item} onSelected={SeleccionEstructura} />;
   };
 
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Platform } from "react-native";
 import { Color } from "../constantes/Color";
@@ -12,7 +12,7 @@ const Stack = createNativeStackNavigator();
 
 const ShopNavigator = () => {
   return (
-    <NavigationContainer>
+    
       <Stack.Navigator
         initialRouteName="Inicio"
         screenOptions={{
@@ -53,7 +53,7 @@ const ShopNavigator = () => {
           })}
         />
       </Stack.Navigator>
-    </NavigationContainer>
+   
   );
 };
 

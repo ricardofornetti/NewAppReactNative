@@ -1,20 +1,21 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React from 'react'
+import { Text, View, StyleSheet } from 'react-native'
+import AddItem from '../../componentes/AddItem'
 
-const EstructuraDetalle = ({route}) => {
-    const {estructura} = route.params
-
+const StructureDetailScreen = ({route}) => {
+    const {structure} = route.params
   return (
     <View style={styles.screen}>
         {/*<Text style={styles.title}>{estructura.name}</Text>*/}
-        <Text>{estructura.description}</Text>
-        <List />
+        <Text>{structure.description}</Text>
+        <AddItem />   
         
     </View>
   )
 }
 
-export default EstructuraDetalle;
+export default StructureDetailScreen;
+
 
 const styles = StyleSheet.create({
     screen: {
@@ -28,6 +29,4 @@ const styles = StyleSheet.create({
         fontFamily:'PTSansNarrowBold',
         marginBottom: 10
     }
-})
-
-
+});

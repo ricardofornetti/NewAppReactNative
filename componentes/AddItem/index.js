@@ -26,20 +26,8 @@ export default function AddItem() {
   return (
     <View style={styles.container}>
       <TextInput
-        placeholder="Ingrese Subestacion"
-        style={styles.input}
-        value={textItem}
-        onChangeText={onHandlerChangeItem}
-      />
-      <TextInput
-        placeholder="Ingrese Ubicación"
-        style={styles.input}
-        value={textItem}
-        onChangeText={onHandlerChangeItem}
-      />
-      <TextInput
         multiline={true}
-        placeholder="Descipción"
+        placeholder="Ingrese breve Descipción"
         style={styles.input}
         value={textItem}
         onChangeText={onHandlerChangeItem}
